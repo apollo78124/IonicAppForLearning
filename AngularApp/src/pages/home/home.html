@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Ionic Blank
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item *ngFor="let item of items">
+            <ion-thumbnail slot="start">
+                <ion-img [src]="assets/img"></ion-img>
+            </ion-thumbnail>
+            <ion-label>{{item.text}}</ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<img src=“assets/img/alex.jpg”>
+<ion-img [src]="assets/img">
