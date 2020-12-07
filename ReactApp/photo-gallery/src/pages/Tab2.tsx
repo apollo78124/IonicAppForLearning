@@ -9,22 +9,21 @@ import { usePhotoGallery } from '../hooks/usePhotoGallery';
 
 // //onClick={() => takePhoto()}>
 const Tab2: React.FC = () => {
-  const { takePhoto } = usePhotoGallery();
+  const { photos, takePhoto } = usePhotoGallery();
+  var imagePath = "/assets/imgs/";
+  var imageName = "alex.jpg";
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Gallery App</IonTitle>
+          <IonTitle>David Lee Gallery App</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 2</IonTitle>
-          </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 2 page" />
-        <IonFab vertical="bottom" horizontal="center" slot="fixed">
+      <IonImg src={imagePath + imageName} />
+      <IonFab vertical="bottom" horizontal="center" slot="fixed">
         <IonFabButton onClick={() => takePhoto()}>
           <IonIcon icon={camera}></IonIcon>
         </IonFabButton>
