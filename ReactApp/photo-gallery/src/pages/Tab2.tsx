@@ -29,7 +29,7 @@ import { setSyntheticLeadingComments } from 'typescript';
  var imagePath = "/assets/imgs/";
 const Tab2: React.FC = () => {
   const { photos, takePhoto } = usePhotoGallery();
-  var { imageName, ImageRight } = ImageSwap();
+  var { imageName, ImageRight, ImageLeft } = ImageSwap();
   return (
     <IonPage>
       <IonHeader>
@@ -41,7 +41,7 @@ const Tab2: React.FC = () => {
         <IonHeader collapse="condense">
         </IonHeader>
       <IonImg src={imagePath + imageName} />
-      <button onClick={() => ImageRight()}>
+      <button onClick={() => ImageLeft()}>
         Left
       </button>
 
